@@ -12,6 +12,14 @@ a:visited {
 
 }
 
+.bcolor {
+  background-color:rgb(241, 241, 243);
+}
+
+.lineh{
+  line-height: 10px;
+}
+
 a:hover,
 a:active {
   background-color: blue;
