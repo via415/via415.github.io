@@ -47,3 +47,6 @@ li.distance {
 .arrowRight {
     float:right;padding-right: 10px;
 }
+body {
+     overflow: scroll;
+   }
