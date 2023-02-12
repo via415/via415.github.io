@@ -17,35 +17,9 @@
     <meta name="generator" content="science" />
     <meta name="author" content="Via415" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="../css/via415.css" />
+    <link rel="stylesheet" href="css/via415.css" />
 
-    <!-- https://stackoverflow.com/questions/20681974/how-to-embed-a-google-drive-folder-in-a-website 
-     http://jsfiddle.net/qMEzn/2/
-    -->
-
-    <script>
-        /* function displayIframeDryer(where, pval, nval) {
-            var dryer = document.getElementById(where.attributes.rel.value);
-            where.value = (where.value == pval) ? nval : pval;
-            dryer.style.display = (dryer.style.display == 'block') ? 'none' : 'block'
-
-        } */
-
-      /*   function displayIframeTrash(where, pval, nval) {
-            var trash = document.getElementById(where.attributes.rel.value);
-            where.value = (where.value == pval) ? nval : pval;
-            trash.style.display = (trash.style.display == 'block') ? 'none' : 'block'
-
-        } */
-      /*   function displayIframeWasher(where, pval, nval) {
-            var washer = document.getElementById(where.attributes.rel.value);
-            where.value = (where.value == pval) ? nval : pval;
-            washer.style.display = (washer.style.display == 'block') ? 'none' : 'block'
-
-        } */
-
-    </script>
-    
+   
 </head>
 
 <body>
@@ -57,11 +31,8 @@
 
     <h3 style="width:100%; text-align: center;">Trash collection Schedule</h3>
    
-
-    <!-- <input style="width:100%; padding:10px;font-weight: bold;font-size: 18px;" type="button" name="button1" id="nextbt" rel="myWasher" value="Close Washer"
-        onclick="displayIframeWasher(this, 'Close Washer', 'Open Washer')"> -->
     <div id="myWasher" style="padding:20px">
-        <iframe src="../washer/trashpickup.pdf" style="height:400px; width:100%"></iframe>
+        <iframe src="washer/trashpickup.pdf" style="height:400px; width:100%"></iframe>
     </div>
 
     
