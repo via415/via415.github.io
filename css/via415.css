@@ -1,36 +1,49 @@
-
-a:link, button,
+a:link,
+input,
 a:visited {
-  background-color: grey;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 4px;
-  font-weight: bold;
+    background-color: grey;
+    color: white;
+    /* padding: 10px 20px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: bold;
 
 }
 
 .bcolor {
-  background-color:rgb(241, 241, 243);
+    background-color: rgb(241, 241, 243);
 }
 
-.lineh{
-  line-height: 10px;
+.lineh {
+    line-height: 10px;
 }
 
 a:hover,
 a:active {
-  background-color: blue;
+    background-color: gray;
 }
 
 li.distance {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .block {
-  display: inline-block;
-  max-width: 300px;
+    display: inline-block;
+    max-width: 300px;
+}
+
+#myCalendar {
+    display: none
+}
+
+.boxmen {
+    width: 100%;
+    text-align: center;
+    padding-top:10px;padding-bottom: 10px;
+}
+.arrowRight {
+    float:right;padding-right: 10px;
 }
