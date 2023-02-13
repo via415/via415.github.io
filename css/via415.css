@@ -47,9 +47,6 @@ li.distance {
 .arrowRight {
     float:right;padding-right: 10px;
 }
-body {
-     overflow: scroll;
-   }
 
 .bckColorTxt {
     background-color: rgb(255, 212, 155);padding: 0.5%;
