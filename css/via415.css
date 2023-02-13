@@ -50,7 +50,7 @@ li.distance {
 
 .bckColorTxt {
     background-color: rgb(255, 212, 155);
-    padding: 2px;
+   text-align: center;
 }
 .bckColorFrame {
     padding:20px;background-color: rgb(219, 225, 219);
