@@ -50,3 +50,10 @@ li.distance {
 body {
      overflow: scroll;
    }
+
+.bckColorTxt {
+    background-color: rgb(255, 212, 155);padding: 0.5%;
+}
+.bckColorFrame {
+    padding:20px;background-color: rgb(219, 225, 219);
+}
