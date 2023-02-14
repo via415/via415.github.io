@@ -58,3 +58,9 @@ li.distance {
 .videoDistance {
     margin:25px 0 25px 0
 }
+.buttonPlan{
+    width:100%; 
+    padding-top:10px;
+    padding-bottom: 10px;
+    display:inline-flexbox;
+}
