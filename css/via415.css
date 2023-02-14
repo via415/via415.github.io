@@ -3,17 +3,49 @@ input,
 a:visited {
     background-color: grey;
     color: white;
-    /* padding: 10px 20px; */
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     border-radius: 4px;
     font-weight: bold;
-
+    
+}
+.spanHome {
+    float:left;
+    padding:0 0 0 10px;
+}
+.spanTitle {
+    float: right; 
+    padding:5px 10px 10px 0;
+}
+.appliancesGuide {
+    width:100%; display:inline;
+}
+.subTitlePadding {
+    padding: 10px 0 10px 0;
+}
+.titlePadding{
+    padding: 30px 0 60px 0;
+}
+.subTitleNoImage {
+    padding: 20px 0 20px 0;
 }
 
 .marginBox {
-    margin-top:20px;
+    margin-top: 20px;
+}
+
+.guideDelCorso {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 11px;
+    
+}
+
+.mainDelCorso {
+    background-color: lightblue;
+    padding: 15px;
 }
 
 .bcolor {
@@ -46,31 +78,39 @@ li.distance {
 .boxmen {
     width: 100%;
     text-align: center;
-    padding-top:10px;padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
 .arrowRight {
-    float:right;padding-right: 10px;
+    float: right;
+    padding-right: 10px;
 }
 
 .bckColorTxt {
     background-color: rgb(255, 212, 155);
-   text-align: center;
+    text-align: center;
 }
+
 .bckColorFrame {
-    padding:20px;background-color: rgb(219, 225, 219);
+    padding: 20px;
+    background-color: rgb(219, 225, 219);
 }
+
 .videoDistance {
-    margin:25px 0 25px 0
+    margin: 25px 0 25px 0
 }
-.buttonPlan{
-    width:100%; 
-    padding-top:10px;
+
+.buttonPlan {
+    width: 100%;
+    padding-top: 10px;
     padding-bottom: 10px;
-    display:inline-flexbox;
+    display: inline-flexbox;
 }
+
 .titleBox {
-    display:block;
-    padding:15px;
-    text-align:center;
-    width:100%;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
 }
