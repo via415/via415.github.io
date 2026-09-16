@@ -1,50 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Del Corso Way</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="13735 Del Corso Way" />
-    <meta name="keywords"
-        content="javascript, HTML5, CSS, CSS3, HTML, ios, iphone, ipad, Android, jquery, reactjs, AJAX, RESTful WS" />
-    <meta name="generator" content="science" />
-    <meta name="author" content="via415" />
-    <link rel="stylesheet" href="css/via415.css?v=1.1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13735 Del Corso Way - Luxury Townhome</title>
+    <meta name="description" content="Explore 13735 Del Corso Way townhome listing details and video walkthrough.">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #2d3748;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            color: #1a365d;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            background-color: #2b6cb0;
+            color: #ffffff;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        .btn:hover {
+            background-color: #2c5282;
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background-color: #edf2f7;
+            color: #2d3748;
+            border: 1px solid #cbd5e0;
+        }
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+        }
+        .btn img {
+            width: 20px;
+            height: 20px;
+        }
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .btn-text .subtext {
+            font-size: 12px;
+            opacity: 0.85;
+            font-weight: normal;
+        }
+    </style>
 </head>
+<body>
 
-<body class="bckColorFrame">
+    <main class="card-container">
+        <h1>13735 Del Corso Way</h1>
 
-    <div class="mainDelCorso">
-        <h2 class="titleBox">13735 Del Corso Way</h2>
+        <a href="./13735.MP4" class="btn">
+            <img src="video.png" alt="Play Video">
+            <div class="btn-text">
+                <span>Play Video Walkthrough</span>
+                <span class="subtext">View a furnished version</span>
+            </div>
+        </a>
 
-    </div>
-
-    <div class="mainColorBck">
-        <div class="marginBox">
-            <a href="./13735.MP4" class="buttonPlan">
-                <div>
-                    <img src="video.png">
-                </div>
-                <span>
-                    Play video - View a Furnished Version 
-                </span>
-            </a>
-        </div>
-    </div>
-
-    <div class="mainColorBck">
-        <div class="marginBox">
-            <a href="./13735-townhome.html" class="buttonPlan">
-                <div>
-                   Townhome Listing information 
-                </div>
-                <span>
-                    Click here to view listing
-                </span>
-            </a>
-        </div>
-    </div>
+        <a href="./13735-townhome.html" class="btn btn-secondary">
+            <div class="btn-text" style="text-align: center; width: 100%;">
+                <span>Townhome Listing Information</span>
+                <span class="subtext">Click here to view full listing</span>
+            </div>
+        </a>
+    </main>
 
 </body>
-
 </html>
