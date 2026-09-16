@@ -45,19 +45,14 @@
             font-size: 22px;
             color: #1a365d;
         }
-
-        /* Gallery Grid Layout */
+        /* Grid Layout */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 16px;
-            align-items: center;
         }
-        
-        /* Standard Gallery Item (Photos 4-45) */
         .gallery-item {
             display: none; /* Controlled by JS pagination */
-            position: relative;
             aspect-ratio: 4 / 3;
             overflow: hidden;
             border-radius: 8px;
@@ -73,36 +68,6 @@
         .gallery-item:hover img {
             transform: scale(1.04);
         }
-
-        /* Special Styling for Map/Floorplan Images (Photos 1, 2, 3) */
-        .gallery-item.map-item {
-            aspect-ratio: 3 / 4; /* Portrait ratio so maps/plans aren't awkwardly cropped */
-            max-width: 180px;   /* Display smaller than standard photos */
-            margin: 0 auto;     /* Center inside grid cell */
-            border: 2px solid #cbd5e0;
-            background-color: #f8fafc;
-        }
-        .gallery-item.map-item img {
-            object-fit: contain; /* Prevents floorplan details from being cropped out */
-            padding: 8px;
-        }
-        
-        /* "Click to Enlarge" Overlay Banner on Maps */
-        .map-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(26, 54, 93, 0.85);
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: 600;
-            text-align: center;
-            padding: 6px 4px;
-            letter-spacing: 0.3px;
-            pointer-events: none;
-        }
-
         /* Load More Controls */
         .controls {
             text-align: center;
@@ -122,7 +87,6 @@
         .btn-load:hover {
             background-color: #2c5282;
         }
-
         /* Lightbox Preview */
         .lightbox {
             display: none;
@@ -140,7 +104,6 @@
             max-width: 90%;
             max-height: 85%;
             border-radius: 6px;
-            object-fit: contain;
         }
         .lightbox-close {
             position: absolute;
@@ -162,7 +125,7 @@
     </div>
 
     <div class="gallery-grid" id="gallery">
-        <!-- JS dynamically populates images here -->
+        <!-- Generates image tags dynamically for photo-1.jpg through photo-45.jpg -->
     </div>
 
     <div class="controls">
@@ -170,7 +133,7 @@
     </div>
 </div>
 
-<!-- Lightbox Modal for Enlarged Viewing -->
+<!-- Fullscreen Image Preview Overlay -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
     <img id="lightboxImg" src="" alt="Enlarged view">
@@ -184,31 +147,21 @@
     const gallery = document.getElementById('gallery');
     const loadMoreBtn = document.getElementById('loadMoreBtn');
 
-    // Generate gallery items
+    // 1. Generate image containers dynamically
     for (let i = 1; i <= totalImages; i++) {
         const item = document.createElement('div');
+        item.className = 'gallery-item';
+        
+        // Update image path pattern below if your images are named differently (e.g. img1.jpg or photo1.jpg)
         const imgSrc = `images/photo-${i}.jpg`;
         
-        // Check if item is one of the first 3 floorplan/map images
-        if (i <= 3) {
-            item.className = 'gallery-item map-item';
-            item.innerHTML = `
-                <img src="${imgSrc}" alt="Floorplan / Map ${i}" loading="lazy" onclick="openLightbox('${imgSrc}')">
-                <div class="map-overlay">🔍 Click to enlarge</div>
-            `;
-        } else {
-            item.className = 'gallery-item';
-            item.innerHTML = `
-                <img src="${imgSrc}" alt="Property Photo ${i}" loading="lazy" onclick="openLightbox('${imgSrc}')">
-            `;
-        }
-
+        item.innerHTML = `<img src="${imgSrc}" alt="Property Photo ${i}" loading="lazy" onclick="openLightbox('${imgSrc}')">`;
         gallery.appendChild(item);
     }
 
     const items = document.querySelectorAll('.gallery-item');
 
-    // Paginate/show images in batches
+    // 2. Paginate/show images in batches
     function showNextBatch() {
         const nextLimit = currentlyShown + itemsPerPage;
         for (let i = currentlyShown; i < nextLimit && i < totalImages; i++) {
@@ -217,16 +170,16 @@
         currentlyShown = nextLimit;
 
         if (currentlyShown >= totalImages) {
-            loadMoreBtn.style.display = 'none';
+            loadMoreBtn.style.display = 'none'; // Hide button when all images are visible
         }
     }
 
-    // Initial batch load
+    // Initial load
     showNextBatch();
 
     loadMoreBtn.addEventListener('click', showNextBatch);
 
-    // Lightbox Controls
+    // 3. Fullscreen Lightbox logic
     function openLightbox(src) {
         document.getElementById('lightboxImg').src = src;
         document.getElementById('lightbox').style.display = 'flex';
