@@ -20,6 +20,10 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+
+            /* Premium Slate Gradient */
+            background: linear-gradient(135deg, #1e293b 0%, #b1cdf9 100%);
+
         }
         .card-container {
             background: #ffffff;
@@ -76,6 +80,15 @@
             opacity: 0.85;
             font-weight: normal;
         }
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #1e293b;
+            border: 1px solid #cbd5e0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+        .btn-secondary:hover {
+            background-color: #f8fafc;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +97,25 @@
         <h1>13735 Del Corso Way</h1>
 
         <a href="./13735.MP4" class="btn">
-            <img src="video.png" alt="Play Video">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slow-blink">
+        <style>
+            .slow-blink {
+                animation: slowPulse 2.5s infinite ease-in-out;
+            }
+            @keyframes slowPulse {
+                0%, 100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0.35;
+                    transform: scale(0.94);
+                }
+            }
+        </style>
+        <circle cx="12" cy="12" r="10"></circle>
+        <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+        </svg>
             <div class="btn-text">
                 <span>Play Video Walkthrough</span>
                 <span class="subtext">View a furnished version</span>
