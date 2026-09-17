@@ -22,10 +22,13 @@
             padding: 20px;
 
             /* Premium Slate Gradient */
-            background: linear-gradient(135deg, #1e293b 0%, #b1cdf9 100%);
+            /* background: linear-gradient(135deg, #1e293b 0%, #b1cdf9 100%); */
+            /* Background image settings */
+            background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)), 
+                url('images/photo-4.jpg') center/cover no-repeat fixed;
 
         }
-        .card-container {
+        /* .card-container {
             background: #ffffff;
             width: 100%;
             max-width: 480px;
@@ -33,7 +36,17 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             padding: 32px 24px;
             text-align: center;
-        }
+        } */
+        .card-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            padding: 32px 24px;
+            text-align: center;
+        }     
         h1 {
             font-size: 24px;
             color: #1a365d;
