@@ -56,6 +56,17 @@
             margin-bottom: 24px;
             font-weight: 700;
         }
+        .address-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .address-link h1 {
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+        .address-link:hover h1 {
+            color: #2b6cb0;
+            transform: translateY(-1px);
+        }
         .btn {
             display: flex;
             align-items: center;
@@ -110,58 +121,42 @@
 <body>
 
     <main class="card-container">
-        <h1>13735 Del Corso Way</h1>
+        <!-- Line 113: Clickable Address Link -->
+        <a href="https://www.google.com/maps/search/?api=1&query=13735+Del+Corso+Way,+Broomfield,+CO+80020" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="address-link"
+           title="Click to open location in Google Maps">
+            <h1>📍 13735 Del Corso Way Broomfield CO 80020</h1>
+        </a>
+
         <h1>(720) 710 - 4525</h1>
-        <!-- <a href="./13735.MP4" class="btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slow-blink">
-        <style>
-            .slow-blink {
-                animation: slowPulse 2.5s infinite ease-in-out;
-            }
-            @keyframes slowPulse {
-                0%, 100% {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-                50% {
-                    opacity: 0.35;
-                    transform: scale(0.94);
-                }
-            }
-        </style>
-        <circle cx="12" cy="12" r="10"></circle>
-        <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-        </svg>
+        
+        <a href="./13735-video.html" class="btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slow-blink">
+                <style>
+                    .slow-blink {
+                        animation: slowPulse 2.5s infinite ease-in-out;
+                    }
+                    @keyframes slowPulse {
+                        0%, 100% {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                        50% {
+                            opacity: 0.35;
+                            transform: scale(0.94);
+                        }
+                    }
+                </style>
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+            </svg>
             <div class="btn-text">
                 <span>Play Video Walkthrough</span>
                 <span class="subtext">View a furnished version</span>
             </div>
-        </a> -->
-<a href="./13735-video.html" class="btn">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="slow-blink">
-        <style>
-            .slow-blink {
-                animation: slowPulse 2.5s infinite ease-in-out;
-            }
-            @keyframes slowPulse {
-                0%, 100% {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-                50% {
-                    opacity: 0.35;
-                    transform: scale(0.94);
-                }
-            }
-        </style>
-        <circle cx="12" cy="12" r="10"></circle>
-        <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
-    </svg>
-    <div class="btn-text">
-        <span>Play Video Walkthrough</span>
-        <span class="subtext">View a furnished version</span>
-    </div>
-</a>
+        </a>
 
         <a href="./13735-townhome.html" class="btn btn-secondary">
             <div class="btn-text" style="text-align: center; width: 100%;">
@@ -170,7 +165,6 @@
             </div>
         </a>
 
-        
         <a href="./13735-images.html" class="btn btn-secondary">
             <div class="btn-text" style="text-align: center; width: 100%;">
                 <span>Photo Gallery</span>
